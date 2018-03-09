@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+//import Alamofire
 
 class LoginVC: BaseViewController {
 
@@ -107,13 +107,43 @@ class LoginVC: BaseViewController {
     
     @objc func clickLoginBtn() -> Void {
         print("click login btn")
+        loadPwdKey()
     }
     
     let url = "http://192.168.100.201:92/Safe.svc/IKey"
     
     
     func loadPwdKey() -> Void {
-        let para = ["name":unameTF.text]
+        //let para = ["name":unameTF.text]
+
+//        request(url).responseData { (response) in
+//            print(response)
+//            print(response.request as Any)
+//            print(response.response as Any)
+//            print(response.data as Any)
+//            print(response.result)
+//        }
+        
+        
+        let para :Parameters = ["name":unameTF.text!]
+        
+        request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers: nil).responseString { (response) in
+//            print(response)
+//            print(response.request as Any)
+//            print(response.response as Any)
+//            print(response.data as Any)
+//            print(response.result)
+            switch response.result {
+            case .success:
+                print(response.response!.statusCode)
+            case .failure(let error):
+                print(error)
+            }
+            
+            
+        }
+        
+        
 
         
     }
