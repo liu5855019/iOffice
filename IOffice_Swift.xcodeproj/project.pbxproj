@@ -223,7 +223,6 @@
 		44683565204F9A2E00467ED3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				44CB438A2051410C00F93853 /* Framework */,
 				44683566204F9A9F00467ED3 /* Images */,
 				44683551204F995A00467ED3 /* AppDelegate.swift */,
 				44683553204F995A00467ED3 /* ViewController.swift */,
@@ -324,13 +323,6 @@
 				44683596204FC06200467ED3 /* UILayoutSupport+Extensions.swift */,
 			);
 			path = SnapKit;
-			sourceTree = "<group>";
-		};
-		44CB438A2051410C00F93853 /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Framework;
 			sourceTree = "<group>";
 		};
 		44FEAE8E20521F29006A1DD4 /* Alamofire */ = {
