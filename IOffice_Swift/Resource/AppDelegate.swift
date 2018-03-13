@@ -27,6 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func login()
+    {
+        let vc = SignVC()
+        let navc = BaseNavigationController.init(rootViewController: vc)
+        window?.rootViewController = navc
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

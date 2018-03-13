@@ -107,6 +107,10 @@ class LoginVC: BaseViewController {
     
     @objc func clickLoginBtn() -> Void {
         print("click login btn")
+        
+        let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.login()
+        
         loadPwdKey()
     }
     
@@ -131,7 +135,7 @@ class LoginVC: BaseViewController {
 //            print(response)
 //            print(response.request as Any)
 //            print(response.response as Any)
-//            print(response.data as Any)
+            //print(response.data as Any)
 //            print(response.result)
             switch response.result {
             case .success:
@@ -142,9 +146,6 @@ class LoginVC: BaseViewController {
             
             
         }
-        
-        
-
         
     }
     

@@ -82,6 +82,16 @@
 		44FEAEB320521F4F006A1DD4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FEAEA020521F4E006A1DD4 /* Response.swift */; };
 		44FEAEB420521F4F006A1DD4 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FEAEA120521F4E006A1DD4 /* Notifications.swift */; };
 		44FEAEB520521F4F006A1DD4 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FEAEA220521F4F006A1DD4 /* MultipartFormData.swift */; };
+		640DD85B2058077E00A9D321 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DD85A2058077E00A9D321 /* HomeVC.swift */; };
+		640DD85D205808F100A9D321 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DD85C205808F100A9D321 /* BaseNavigationController.swift */; };
+		640DD86020580B8F00A9D321 /* SignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DD85F20580B8F00A9D321 /* SignVC.swift */; };
+		640DD86E20580C7B00A9D321 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DD86320580C7B00A9D321 /* FMDatabaseQueue.m */; };
+		640DD86F20580C7B00A9D321 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DD86620580C7B00A9D321 /* FMDatabaseAdditions.m */; };
+		640DD87020580C7B00A9D321 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DD86720580C7B00A9D321 /* FMDatabase.m */; };
+		640DD87120580C7B00A9D321 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DD86B20580C7B00A9D321 /* FMDatabasePool.m */; };
+		640DD87220580C7B00A9D321 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DD86C20580C7B00A9D321 /* FMResultSet.m */; };
+		640DD87620580D2F00A9D321 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DD87420580D2E00A9D321 /* DBManager.m */; };
+		640DD87D2058124800A9D321 /* DMDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DD87C2058124800A9D321 /* DMDBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +174,24 @@
 		44FEAEA020521F4E006A1DD4 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		44FEAEA120521F4E006A1DD4 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		44FEAEA220521F4F006A1DD4 /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		640DD85A2058077E00A9D321 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		640DD85C205808F100A9D321 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		640DD85F20580B8F00A9D321 /* SignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignVC.swift; sourceTree = "<group>"; };
+		640DD86220580C7B00A9D321 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		640DD86320580C7B00A9D321 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		640DD86420580C7B00A9D321 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		640DD86520580C7B00A9D321 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		640DD86620580C7B00A9D321 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		640DD86720580C7B00A9D321 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		640DD86820580C7B00A9D321 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		640DD86920580C7B00A9D321 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		640DD86A20580C7B00A9D321 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		640DD86B20580C7B00A9D321 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		640DD86C20580C7B00A9D321 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		640DD87420580D2E00A9D321 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		640DD87520580D2F00A9D321 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		640DD87B20580F2900A9D321 /* IOffice_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOffice_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		640DD87C2058124800A9D321 /* DMDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMDBManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +224,11 @@
 		44683550204F995A00467ED3 /* IOffice_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				640DD87520580D2F00A9D321 /* DBManager.h */,
+				640DD87420580D2E00A9D321 /* DBManager.m */,
+				640DD87C2058124800A9D321 /* DMDBManager.swift */,
+				640DD85E20580B5300A9D321 /* Sign */,
+				640DD8592058075100A9D321 /* Home */,
 				44683583204FC00A00467ED3 /* Others */,
 				44683568204F9B1000467ED3 /* Base */,
 				44683563204F9A0500467ED3 /* Login */,
@@ -230,6 +263,7 @@
 				44683558204F995B00467ED3 /* Assets.xcassets */,
 				4468355A204F995B00467ED3 /* LaunchScreen.storyboard */,
 				4468355D204F995B00467ED3 /* Info.plist */,
+				640DD87B20580F2900A9D321 /* IOffice_Swift-Bridging-Header.h */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -265,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				44683569204F9B2B00467ED3 /* BaseViewController.swift */,
+				640DD85C205808F100A9D321 /* BaseNavigationController.swift */,
 				44683581204FA26700467ED3 /* Common.swift */,
 				446835F6204FC63900467ED3 /* UserInfo.swift */,
 				446835F8204FCDEC00467ED3 /* Person.swift */,
@@ -277,6 +312,7 @@
 		44683583204FC00A00467ED3 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				640DD86120580C7B00A9D321 /* fmdb */,
 				44FEAE8E20521F29006A1DD4 /* Alamofire */,
 				44683584204FC02E00467ED3 /* SnapKit */,
 			);
@@ -348,6 +384,40 @@
 				44FEAE8F20521F4B006A1DD4 /* Validation.swift */,
 			);
 			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		640DD8592058075100A9D321 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				640DD85A2058077E00A9D321 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		640DD85E20580B5300A9D321 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				640DD85F20580B8F00A9D321 /* SignVC.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		640DD86120580C7B00A9D321 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				640DD86220580C7B00A9D321 /* FMDatabase.h */,
+				640DD86320580C7B00A9D321 /* FMDatabaseQueue.m */,
+				640DD86420580C7B00A9D321 /* FMResultSet.h */,
+				640DD86520580C7B00A9D321 /* FMDatabasePool.h */,
+				640DD86620580C7B00A9D321 /* FMDatabaseAdditions.m */,
+				640DD86720580C7B00A9D321 /* FMDatabase.m */,
+				640DD86820580C7B00A9D321 /* FMDatabaseQueue.h */,
+				640DD86920580C7B00A9D321 /* FMDB.h */,
+				640DD86A20580C7B00A9D321 /* FMDatabaseAdditions.h */,
+				640DD86B20580C7B00A9D321 /* FMDatabasePool.m */,
+				640DD86C20580C7B00A9D321 /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,14 +505,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640DD85B2058077E00A9D321 /* HomeVC.swift in Sources */,
 				44FEAEAD20521F4F006A1DD4 /* Result.swift in Sources */,
 				446835CB204FC06500467ED3 /* ConstraintView.swift in Sources */,
+				640DD87120580C7B00A9D321 /* FMDatabasePool.m in Sources */,
 				446835C8204FC06500467ED3 /* Constraint.swift in Sources */,
 				44FEAEA320521F4F006A1DD4 /* Validation.swift in Sources */,
 				446835CA204FC06500467ED3 /* ConstraintMakerExtendable.swift in Sources */,
 				446835AB204FC06500467ED3 /* ConstraintLayoutSupport.swift in Sources */,
 				44FEAEA920521F4F006A1DD4 /* TaskDelegate.swift in Sources */,
 				44FEAEAE20521F4F006A1DD4 /* DispatchQueue+Alamofire.swift in Sources */,
+				640DD87020580C7B00A9D321 /* FMDatabase.m in Sources */,
 				446835AE204FC06500467ED3 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				446835B8204FC06500467ED3 /* LayoutConstraintItem.swift in Sources */,
 				44FEAEA420521F4F006A1DD4 /* Request.swift in Sources */,
@@ -459,14 +532,17 @@
 				4468356C204F9B5500467ED3 /* LoginVC.swift in Sources */,
 				446835F7204FC63900467ED3 /* UserInfo.swift in Sources */,
 				44FEAEAC20521F4F006A1DD4 /* NetworkReachabilityManager.swift in Sources */,
+				640DD86E20580C7B00A9D321 /* FMDatabaseQueue.m in Sources */,
 				44FEAEA520521F4F006A1DD4 /* ResponseSerialization.swift in Sources */,
 				44683582204FA26700467ED3 /* Common.swift in Sources */,
+				640DD87220580C7B00A9D321 /* FMResultSet.m in Sources */,
 				446835C0204FC06500467ED3 /* ConstraintInsetTarget.swift in Sources */,
 				44FEAEB220521F4F006A1DD4 /* Alamofire.swift in Sources */,
 				446835A9204FC06500467ED3 /* Debugging.swift in Sources */,
 				446835FE204FD81D00467ED3 /* Date_DMTools.swift in Sources */,
 				446835AC204FC06500467ED3 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				44FEAEAA20521F4F006A1DD4 /* Timeline.swift in Sources */,
+				640DD86F20580C7B00A9D321 /* FMDatabaseAdditions.m in Sources */,
 				446835C4204FC06500467ED3 /* Typealiases.swift in Sources */,
 				446835C1204FC06500467ED3 /* ConstraintDSL.swift in Sources */,
 				446835BA204FC06500467ED3 /* ConstraintMakerPriortizable.swift in Sources */,
@@ -486,12 +562,16 @@
 				44FEAEB320521F4F006A1DD4 /* Response.swift in Sources */,
 				44FEAEA720521F4F006A1DD4 /* AFError.swift in Sources */,
 				446835B6204FC06500467ED3 /* ConstraintConfig.swift in Sources */,
+				640DD86020580B8F00A9D321 /* SignVC.swift in Sources */,
 				44FEAEAB20521F4F006A1DD4 /* ParameterEncoding.swift in Sources */,
 				446835B2204FC06500467ED3 /* ConstraintRelatableTarget.swift in Sources */,
 				446835BF204FC06500467ED3 /* ConstraintMultiplierTarget.swift in Sources */,
 				44FEAEB520521F4F006A1DD4 /* MultipartFormData.swift in Sources */,
+				640DD87D2058124800A9D321 /* DMDBManager.swift in Sources */,
 				446835C2204FC06500467ED3 /* ConstraintConstantTarget.swift in Sources */,
+				640DD87620580D2F00A9D321 /* DBManager.m in Sources */,
 				446835B1204FC06500467ED3 /* ConstraintViewDSL.swift in Sources */,
+				640DD85D205808F100A9D321 /* BaseNavigationController.swift in Sources */,
 				446835B7204FC06500467ED3 /* ConstraintDescription.swift in Sources */,
 				44FEAEB120521F4F006A1DD4 /* SessionDelegate.swift in Sources */,
 				44FEAEB420521F4F006A1DD4 /* Notifications.swift in Sources */,
@@ -644,6 +724,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "HB.IOffice-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/IOffice_Swift/Resource/IOffice_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -667,6 +748,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "HB.IOffice-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/IOffice_Swift/Resource/IOffice_Swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
