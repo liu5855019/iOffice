@@ -8,8 +8,11 @@
 
 import Foundation
 
-let yyyyMMdd = "yyyy-MM-dd"
 
+let yyyyMMddHHmmss = "yyyy-MM-dd HH:mm:ss"
+let yyyyMMddHHmm = "yyyy-MM-dd HH:mm"
+let yyyyMMdd = "yyyy-MM-dd"
+let HHmmss = "HH:mm:ss"
 
 
 extension Date
@@ -21,6 +24,20 @@ extension Date
         let date = formatter.string(from: self)
         return Int(date)!
     }
+    
+    func string(format:String) -> String
+    {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        return formatter.string(from: self)
+    }
+    var detailString : String
+    {
+        let formatter = DateFormatter()
+        formatter.dateFormat = yyyyMMddHHmmss
+        return formatter.string(from: self)
+    }
+    
     
 }
 

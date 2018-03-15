@@ -8,12 +8,16 @@
 
 import UIKit
 
-class DMDBManager: NSObject {
+let dbFile = "DATAS.db"
 
-    lazy var dataBase = FMDatabase.init(path: "")
+class DMDBManager: NSObject {
+    
+    let path = DMTools.filePathInDocument(file:dbFile)
+    
+    lazy var dataBase = FMDatabase.init(path: self.path)
     
     
-    static let shareDB: DMDBManager = {
+    static let shareDB: DMDBManager? = {
         
         let manager = DMDBManager()
         
@@ -22,16 +26,59 @@ class DMDBManager: NSObject {
         if (!result)
         {
             print(manager.dataBase?.lastErrorMessage() as Any)
-            
+            return nil
         }
+        
+        manager.createLogTable()
         
         return manager
     }()
     
     private override init() {}
     
+    //func
     
+    //创建log table
+    func createLogTable() -> Bool
+    {
+        let sql = "create table if not exists logtable(ID integer primary key, time text,content text,page text)"
+        
+        let result = (self.dataBase?.executeStatements(sql))!
+        
+        if !result {
+            print("创建 log 表失败");
+            print("-----error-----:\(String(describing: self.dataBase?.lastErrorMessage()))")
+        } else {
+            print("创建 log 表成功")
+        }
+        return result
+    }
     
+    //插入 log 数据
+    func insertLog(page:String , content:String , date:Date?) -> Bool
+    {
+        let timeStr = date == nil ? Date().detailString : date?.detailString
+        
+        let result = (self.dataBase?.executeUpdate("insert into logtable(page,content,time) values(?,?,?)", withArgumentsIn: [page,content,timeStr!]))!
+
+        if !result {
+            print("插入log失败");
+            print("-----error-----:\(String(describing: self.dataBase?.lastErrorMessage()))")
+        } else {
+            print("插入log成功")
+        }
+        return result
+    }
     
-    
+    func selectAllLogs() -> [Any]
+    {
+        let set = self.dataBase?.executeQuery("select * from logtable", withArgumentsIn: [])
+        var muarray = [Any]()
+        while (set?.next())! {
+            let dict = set?.resultDictionary()
+            muarray.append(dict!)
+            print(dict as Any)
+        }
+        return muarray
+    }
 }

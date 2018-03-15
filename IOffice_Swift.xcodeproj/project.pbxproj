@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4447F861205A2DC800D3155C /* DMTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447F860205A2DC800D3155C /* DMTools.swift */; };
 		44683552204F995A00467ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44683551204F995A00467ED3 /* AppDelegate.swift */; };
 		44683554204F995A00467ED3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44683553204F995A00467ED3 /* ViewController.swift */; };
 		44683557204F995B00467ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44683555204F995B00467ED3 /* Main.storyboard */; };
@@ -95,6 +96,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4447F860205A2DC800D3155C /* DMTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTools.swift; sourceTree = "<group>"; };
 		4468354E204F995A00467ED3 /* IOffice_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOffice_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44683551204F995A00467ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44683553204F995A00467ED3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				640DD87520580D2F00A9D321 /* DBManager.h */,
 				640DD87420580D2E00A9D321 /* DBManager.m */,
 				640DD87C2058124800A9D321 /* DMDBManager.swift */,
+				4447F860205A2DC800D3155C /* DMTools.swift */,
 				640DD85E20580B5300A9D321 /* Sign */,
 				640DD8592058075100A9D321 /* Home */,
 				44683583204FC00A00467ED3 /* Others */,
@@ -520,6 +523,7 @@
 				446835B8204FC06500467ED3 /* LayoutConstraintItem.swift in Sources */,
 				44FEAEA420521F4F006A1DD4 /* Request.swift in Sources */,
 				44683554204F995A00467ED3 /* ViewController.swift in Sources */,
+				4447F861205A2DC800D3155C /* DMTools.swift in Sources */,
 				446835BC204FC06500467ED3 /* ConstraintLayoutGuide.swift in Sources */,
 				446835AD204FC06500467ED3 /* ConstraintMakerRelatable.swift in Sources */,
 				44683552204F995A00467ED3 /* AppDelegate.swift in Sources */,

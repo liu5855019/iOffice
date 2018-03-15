@@ -15,7 +15,9 @@ class SignVC: BaseViewController {
 
         self.title = "Sign VC"
         
-        DMDBManager.shareDB
+        let _ = DMDBManager.shareDB?.insertLog(page: "page1", content: "content1", date: nil)
+        
+        print(DMDBManager.shareDB?.selectAllLogs() as Any) 
         
         self.setupViews()
     }
