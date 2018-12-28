@@ -10,7 +10,11 @@ import UIKit
 import Alamofire
 
 
-let kServerIP = "http://192.168.100.121:3000";
+//let kServerIP = "http://192.168.100.121:3000";
+
+let kServerIP = "http://47.105.171.135:3000";
+
+
 
 let kRegistUrl = kServerIP + "/user/register";
 
