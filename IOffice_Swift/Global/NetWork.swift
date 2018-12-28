@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 let kServerIP = "http://192.168.100.121:3000";

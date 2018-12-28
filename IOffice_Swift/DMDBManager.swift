@@ -29,7 +29,9 @@ class DMDBManager: NSObject {
             return nil
         }
         
-        manager.createLogTable()
+        if (manager.createLogTable()) { }
+        
+        
         
         return manager
     }()

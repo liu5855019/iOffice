@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Alamofire
+import SnapKit
 
 class LoginVC: BaseViewController {
 
@@ -124,10 +124,10 @@ class LoginVC: BaseViewController {
     {
         print("username: " + username + "\npassword: "+password);
         
-        let para:[String:Any] = [
-            "username":username,
-            "password":password
-        ];
+//        let para:[String:Any] = [
+//            "username":username,
+//            "password":password
+//        ];
         
         
         
