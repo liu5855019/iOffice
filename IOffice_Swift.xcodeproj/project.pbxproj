@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC3BDC121D601EB0094BA7F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC021D601EB0094BA7F /* Project.swift */; };
+		0AC3BDC321D6029D0094BA7F /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC221D6029D0094BA7F /* NetWork.swift */; };
 		4447F861205A2DC800D3155C /* DMTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447F860205A2DC800D3155C /* DMTools.swift */; };
 		44683552204F995A00467ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44683551204F995A00467ED3 /* AppDelegate.swift */; };
 		44683554204F995A00467ED3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44683553204F995A00467ED3 /* ViewController.swift */; };
@@ -96,6 +98,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AC3BDC021D601EB0094BA7F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		0AC3BDC221D6029D0094BA7F /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		4447F860205A2DC800D3155C /* DMTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTools.swift; sourceTree = "<group>"; };
 		4468354E204F995A00467ED3 /* IOffice_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOffice_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44683551204F995A00467ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +211,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AC3BDBD21D5FDF20094BA7F /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				44683551204F995A00467ED3 /* AppDelegate.swift */,
+				44683581204FA26700467ED3 /* Common.swift */,
+				446835F6204FC63900467ED3 /* UserInfo.swift */,
+				0AC3BDC021D601EB0094BA7F /* Project.swift */,
+				0AC3BDC221D6029D0094BA7F /* NetWork.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		44683545204F995A00467ED3 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +242,7 @@
 		44683550204F995A00467ED3 /* IOffice_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				0AC3BDBD21D5FDF20094BA7F /* Global */,
 				640DD87520580D2F00A9D321 /* DBManager.h */,
 				640DD87420580D2E00A9D321 /* DBManager.m */,
 				640DD87C2058124800A9D321 /* DMDBManager.swift */,
@@ -260,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				44683566204F9A9F00467ED3 /* Images */,
-				44683551204F995A00467ED3 /* AppDelegate.swift */,
 				44683553204F995A00467ED3 /* ViewController.swift */,
 				44683555204F995B00467ED3 /* Main.storyboard */,
 				44683558204F995B00467ED3 /* Assets.xcassets */,
@@ -303,8 +319,6 @@
 			children = (
 				44683569204F9B2B00467ED3 /* BaseViewController.swift */,
 				640DD85C205808F100A9D321 /* BaseNavigationController.swift */,
-				44683581204FA26700467ED3 /* Common.swift */,
-				446835F6204FC63900467ED3 /* UserInfo.swift */,
 				446835F8204FCDEC00467ED3 /* Person.swift */,
 				446835FA204FD29C00467ED3 /* Son.swift */,
 				446835FD204FD81C00467ED3 /* Date_DMTools.swift */,
@@ -569,7 +583,9 @@
 				640DD86020580B8F00A9D321 /* SignVC.swift in Sources */,
 				44FEAEAB20521F4F006A1DD4 /* ParameterEncoding.swift in Sources */,
 				446835B2204FC06500467ED3 /* ConstraintRelatableTarget.swift in Sources */,
+				0AC3BDC121D601EB0094BA7F /* Project.swift in Sources */,
 				446835BF204FC06500467ED3 /* ConstraintMultiplierTarget.swift in Sources */,
+				0AC3BDC321D6029D0094BA7F /* NetWork.swift in Sources */,
 				44FEAEB520521F4F006A1DD4 /* MultipartFormData.swift in Sources */,
 				640DD87D2058124800A9D321 /* DMDBManager.swift in Sources */,
 				446835C2204FC06500467ED3 /* ConstraintConstantTarget.swift in Sources */,

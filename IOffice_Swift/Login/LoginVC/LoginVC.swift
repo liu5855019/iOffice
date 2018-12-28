@@ -20,12 +20,14 @@ class LoginVC: BaseViewController {
     let forgetBtn = UIButton();
     
     
-    
+    //MARK: - SETUP
     override func viewDidLoad()
     {
         super.viewDidLoad()
         setupViews()
         setupLayouts()
+        regist("0018","111");
+       
     }
     
     func setupViews()
@@ -105,50 +107,72 @@ class LoginVC: BaseViewController {
         }
     }
     
-    @objc func clickLoginBtn() -> Void {
+    //MARK: - ACTIONS
+    @objc func clickLoginBtn() -> Void
+    {
         print("click login btn")
         
         let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
         delegate.login()
         
-        loadPwdKey()
+        //loadPwdKey()
     }
     
-    let url = "http://192.168.100.201:92/Safe.svc/IKey"
+    
+    //MARK: - NET
+    func regist(_ username:String ,_ password:String) -> Void
+    {
+        print("username: " + username + "\npassword: "+password);
+        
+        let para:[String:Any] = [
+            "username":username,
+            "password":password
+        ];
+        
+        
+        
+    }
     
     
-    func loadPwdKey() -> Void {
-        //let para = ["name":unameTF.text]
-
-//        request(url).responseData { (response) in
-//            print(response)
-//            print(response.request as Any)
-//            print(response.response as Any)
-//            print(response.data as Any)
-//            print(response.result)
+    
+//
+//
+//
+//    let url = "http://192.168.100.201:92/Safe.svc/IKey"
+//
+//
+//    func loadPwdKey() -> Void {
+//        //let para = ["name":unameTF.text]
+//
+////        request(url).responseData { (response) in
+////            print(response)
+////            print(response.request as Any)
+////            print(response.response as Any)
+////            print(response.data as Any)
+////            print(response.result)
+////        }
+//
+//
+//        let para :Parameters = ["name":unameTF.text!]
+//
+//        request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers: nil).responseString { (response) in
+////            print(response)
+////            print(response.request as Any)
+////            print(response.response as Any)
+//            //print(response.data as Any)
+////            print(response.result)
+//            switch response.result {
+//            case .success:
+//                print(response.response!.statusCode)
+//            case .failure(let error):
+//                print(error)
+//            }
+//
+//
 //        }
-        
-        
-        let para :Parameters = ["name":unameTF.text!]
-        
-        request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers: nil).responseString { (response) in
-//            print(response)
-//            print(response.request as Any)
-//            print(response.response as Any)
-            //print(response.data as Any)
-//            print(response.result)
-            switch response.result {
-            case .success:
-                print(response.response!.statusCode)
-            case .failure(let error):
-                print(error)
-            }
-            
-            
-        }
-        
-    }
-    
+//
+//    }
+//
     
     
     
