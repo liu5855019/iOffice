@@ -122,15 +122,18 @@ class LoginVC: BaseViewController {
     //MARK: - NET
     func regist(_ username:String ,_ password:String) -> Void
     {
-        print("username: " + username + "\npassword: "+password);
+        let para:[String:Any] = [
+            "username":username,
+            "password":password
+        ];
         
-//        let para:[String:Any] = [
-//            "username":username,
-//            "password":password
-//        ];
+        print(para);
         
-        
-        
+        post(url: kRegistUrl, para: para, success: { (value) in
+            print(value);
+        }) { (value, code, desc) in
+            print(code);
+        }
     }
     
     

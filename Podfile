@@ -7,7 +7,7 @@ target 'IOffice_Swift' do
    
   pod 'Alamofire'
   pod 'SnapKit'
-
+  pod 'IQKeyboardManagerSwift'
 
   # Pods for IOffice_Swift
 

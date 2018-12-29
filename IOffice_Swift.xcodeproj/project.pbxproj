@@ -120,6 +120,7 @@
 				446835F6204FC63900467ED3 /* UserInfo.swift */,
 				0AC3BDC021D601EB0094BA7F /* Project.swift */,
 				0AC3BDC221D6029D0094BA7F /* NetWork.swift */,
+				4447F860205A2DC800D3155C /* DMTools.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -149,7 +150,6 @@
 				640DD87520580D2F00A9D321 /* DBManager.h */,
 				640DD87420580D2E00A9D321 /* DBManager.m */,
 				640DD87C2058124800A9D321 /* DMDBManager.swift */,
-				4447F860205A2DC800D3155C /* DMTools.swift */,
 				640DD85E20580B5300A9D321 /* Sign */,
 				640DD8592058075100A9D321 /* Home */,
 				44683583204FC00A00467ED3 /* Others */,
@@ -380,11 +380,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IOffice_Swift/Pods-IOffice_Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
