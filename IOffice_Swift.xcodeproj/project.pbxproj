@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA8593B21DCB0D400CAA0D1 /* RegistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */; };
 		0AC3BDC121D601EB0094BA7F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC021D601EB0094BA7F /* Project.swift */; };
 		0AC3BDC321D6029D0094BA7F /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC221D6029D0094BA7F /* NetWork.swift */; };
 		0C5802F3E45516930DB55C52 /* Pods_IOffice_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219B35AF755933059A1E8503 /* Pods_IOffice_Swift.framework */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistVC.swift; sourceTree = "<group>"; };
 		0AC3BDC021D601EB0094BA7F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		0AC3BDC221D6029D0094BA7F /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		1AD9D92DE0B64285A0DC66F7 /* Pods-IOffice_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOffice_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOffice_Swift/Pods-IOffice_Swift.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA8593C21DCB12E00CAA0D1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				44683563204F9A0500467ED3 /* Login */,
+				640DD85E20580B5300A9D321 /* Sign */,
+				640DD8592058075100A9D321 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		0AC3BDBD21D5FDF20094BA7F /* Global */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,11 +162,9 @@
 				640DD87520580D2F00A9D321 /* DBManager.h */,
 				640DD87420580D2E00A9D321 /* DBManager.m */,
 				640DD87C2058124800A9D321 /* DMDBManager.swift */,
-				640DD85E20580B5300A9D321 /* Sign */,
-				640DD8592058075100A9D321 /* Home */,
+				0AA8593C21DCB12E00CAA0D1 /* Modules */,
 				44683583204FC00A00467ED3 /* Others */,
 				44683568204F9B1000467ED3 /* Base */,
-				44683563204F9A0500467ED3 /* Login */,
 				44683565204F9A2E00467ED3 /* Resource */,
 			);
 			path = IOffice_Swift;
@@ -172,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				4468356B204F9B5500467ED3 /* LoginVC.swift */,
+				0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -381,13 +392,17 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-IOffice_Swift/Pods-IOffice_Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -453,6 +468,7 @@
 				640DD86020580B8F00A9D321 /* SignVC.swift in Sources */,
 				0AC3BDC121D601EB0094BA7F /* Project.swift in Sources */,
 				0AC3BDC321D6029D0094BA7F /* NetWork.swift in Sources */,
+				0AA8593B21DCB0D400CAA0D1 /* RegistVC.swift in Sources */,
 				640DD87D2058124800A9D321 /* DMDBManager.swift in Sources */,
 				640DD87620580D2F00A9D321 /* DBManager.m in Sources */,
 				640DD85D205808F100A9D321 /* BaseNavigationController.swift in Sources */,

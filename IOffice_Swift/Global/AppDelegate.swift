@@ -14,14 +14,13 @@ import IQKeyboardManagerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let loginvc = LoginVC()
     
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow.init(frame: UIScreen.main.bounds);
     
-        window?.rootViewController = loginvc;
+        window?.rootViewController = BaseNavigationController.init(rootViewController: LoginVC());
     
         window?.makeKeyAndVisible();
         
@@ -41,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configIQKeyboard() -> Void {
         IQKeyboardManager.shared.enable = true;
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = CGFloat(kScaleW(10));
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true;
     }
     
     //MARK: - DELEGATE

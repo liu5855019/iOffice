@@ -16,11 +16,13 @@ let kLineH = 1.0 / UIScreen.main.scale
 
 let scaleH = kScreenH / 736.0
 let scaleW = kScreenW / 375.0
-func kScaleW(_ w : Float) -> Float {
-    return w * Float(scaleW)
+
+func kScaleW(_ w : Float) -> CGFloat {
+    return CGFloat(w * Float(scaleW))
 }
-func kScaleH(_ h : Float) -> Float {
-    return h * Float(scaleH)
+func kScaleH(_ h : Float) -> CGFloat {
+    return CGFloat(h * Float(scaleH))
 }
+
 
 

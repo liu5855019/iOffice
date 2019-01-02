@@ -16,6 +16,7 @@ class LoginVC: BaseViewController {
     let unameTF = UITextField();
     let pwdTF   = UITextField();
     let loginBtn = UIButton();
+    let registBtn = UIButton();
     let saveBtn = UIButton();
     let forgetBtn = UIButton();
     
@@ -23,11 +24,24 @@ class LoginVC: BaseViewController {
     //MARK: - SETUP
     override func viewDidLoad()
     {
-        super.viewDidLoad()
+        super.viewDidLoad();
+        
+        self.navigationController?.navigationBar.isHidden = true;
+        
         setupViews()
         setupLayouts()
-        regist("0018","111");
-       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        
+        self.navigationController?.navigationBar.isHidden = true;
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        
+        self.navigationController?.navigationBar.isHidden = false;
     }
     
     func setupViews()
@@ -39,6 +53,7 @@ class LoginVC: BaseViewController {
         self.view.addSubview(loginBtn)
         self.view.addSubview(saveBtn)
         self.view.addSubview(forgetBtn)
+        self.view.addSubview(registBtn);
         
         bgImgV.image = UIImage.init(named:"login_bg.png");
         
@@ -46,7 +61,7 @@ class LoginVC: BaseViewController {
         
         unameTF.textColor = UIColor.white
         unameTF.placeholder = "请输入账号"
-        unameTF.font = UIFont.systemFont(ofSize: CGFloat(kScaleW(17)))
+        unameTF.font = UIFont.systemFont(ofSize: kScaleW(17))
         unameTF.textAlignment = NSTextAlignment.center
         unameTF.setValue(UIColor.white.withAlphaComponent(0.5), forKeyPath: "_placeholderLabel.textColor")
         
@@ -54,16 +69,21 @@ class LoginVC: BaseViewController {
         
         pwdTF.textColor = UIColor.white
         pwdTF.placeholder = "请输入密码"
-        pwdTF.font = UIFont.systemFont(ofSize: CGFloat(kScaleW(17)))
+        pwdTF.font = UIFont.systemFont(ofSize: kScaleW(17))
         pwdTF.textAlignment = NSTextAlignment.center
         pwdTF.setValue(UIColor.white.withAlphaComponent(0.5), forKeyPath: "_placeholderLabel.textColor")
         pwdTF.isSecureTextEntry = true
         
         loginBtn.setTitle("登录", for: .normal)
         loginBtn.setBackgroundImage(UIImage.init(named: "login_loginbtn_bg.png"), for: .normal)
-        loginBtn.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(kScaleW(17)))
+        loginBtn.titleLabel?.font = UIFont.systemFont(ofSize: kScaleW(17))
         loginBtn.addTarget(self, action:#selector(clickLoginBtn) , for: .touchUpInside)
         
+        
+        registBtn.setTitle("注册", for: .normal);
+        registBtn.setBackgroundImage(UIImage.init(named: "login_loginbtn_bg.png"), for: .normal)
+        registBtn.titleLabel?.font = UIFont.systemFont(ofSize: kScaleW(17))
+        registBtn.addTarget(self, action:#selector(clickRegistBtn) , for: .touchUpInside)
     }
 
     func setupLayouts()
@@ -83,7 +103,7 @@ class LoginVC: BaseViewController {
             make.top.equalTo(logoIV.snp.bottom).offset(kScaleW(60))
             make.left.equalTo(kScaleW(30))
             make.right.equalTo(kScaleW(-30))
-            make.height.equalTo(44)
+            make.height.equalTo(kScaleW(44))
         }
         unameTF.layer.cornerRadius = 22
         unameTF.layer.borderColor = UIColor.white.cgColor
@@ -105,6 +125,11 @@ class LoginVC: BaseViewController {
             make.right.equalTo(kScaleW(-30))
             make.height.equalTo(44)
         }
+        
+        registBtn.snp.makeConstraints { (make) in
+            make.top.equalTo(loginBtn.snp.bottom).offset(kScaleW(20));
+            make.height.left.right.equalTo(loginBtn);
+        };
     }
     
     //MARK: - ACTIONS
@@ -116,6 +141,10 @@ class LoginVC: BaseViewController {
         delegate.login()
         
         //loadPwdKey()
+    }
+    
+    @objc func clickRegistBtn() -> Void {
+        self.navigationController?.pushViewController(RegistVC(), animated: true);
     }
     
     
