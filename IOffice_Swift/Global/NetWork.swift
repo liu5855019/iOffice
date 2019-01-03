@@ -16,7 +16,8 @@ let kServerIP = "http://192.168.100.121:3000";
 
 
 
-let kRegistUrl = kServerIP + "/user/register";
+let kRegistUrl = kServerIP + "/user/regist";
+let kLoginUrl = kServerIP + "/user/login";
 
 
 func get(url:String,

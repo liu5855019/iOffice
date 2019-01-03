@@ -1,5 +1,5 @@
 //
-//  BaseNavigationController.swift
+//  DMBaseNavigationController.swift
 //  IOffice_Swift
 //
 //  Created by 呆木 on 2018/3/13.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController {
+class DMBaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

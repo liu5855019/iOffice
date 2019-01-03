@@ -10,18 +10,32 @@ import UIKit
 
 //MARK: - Screen
 
-let kScreenH = UIScreen.main.bounds.height
-let kScreenW = UIScreen.main.bounds.width
-let kLineH = 1.0 / UIScreen.main.scale
+let kScreenH = UIScreen.main.bounds.height;
+let kScreenW = UIScreen.main.bounds.width;
+let kLineH = 1.0 / UIScreen.main.scale;
 
-let scaleH = kScreenH / 736.0
-let scaleW = kScreenW / 375.0
+let scaleH = kScreenH / 736.0;
+let scaleW = kScreenW / 375.0;
 
-func kScaleW(_ w : Float) -> CGFloat {
-    return CGFloat(w * Float(scaleW))
+
+let kStatusHeight = UIApplication.shared.statusBarFrame.size.height;
+let kNavHeight = kStatusHeight + 44.0;
+let kIsIPhoneX = kStatusHeight == 44;
+let kSafeBottomHeight = kIsIPhoneX ? 34.0 : 0;
+
+
+
+
+
+
+func kScaleW(_ w : Float) -> CGFloat
+{
+    return CGFloat(w * Float(scaleW));
 }
-func kScaleH(_ h : Float) -> CGFloat {
-    return CGFloat(h * Float(scaleH))
+
+func kScaleH(_ h : Float) -> CGFloat
+{
+    return CGFloat(h * Float(scaleH));
 }
 
 

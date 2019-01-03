@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeVC: BaseViewController {
+class HomeVC: DMBaseViewController {
 
     let signBtn = UIButton()
     

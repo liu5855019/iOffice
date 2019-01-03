@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import PKHUD
 
-class RegistVC: BaseViewController {
+
+class RegistVC: DMBaseViewController {
 
     let unameTF = UITextField();
     let pwdTF = UITextField();
@@ -53,7 +55,7 @@ class RegistVC: BaseViewController {
     func setupLayouts()
     {
         unameTF.snp.makeConstraints { (make) in
-            make.top.equalTo(kScaleW(60))
+            make.top.equalTo(kNavHeight + kScaleW(20))
             make.left.equalTo(kScaleW(30))
             make.right.equalTo(kScaleW(-30))
             make.height.equalTo(kScaleW(44))
@@ -78,13 +80,30 @@ class RegistVC: BaseViewController {
     
     @objc func clickRegistBtn() -> Void
     {
+        self.view.endEditing(true);
         
+        
+        
+        guard unameTF.text?.count != 0 else {
+            self.view.makeToast("请输入账号");
+            return;
+        }
+        
+        guard pwdTF.text?.count != 0 else {
+            self.view.makeToast("请输入密码");
+            return;
+        }
+        
+        print(unameTF.text! + "  " + pwdTF.text!);
+        
+        regist(unameTF.text!, pwdTF.text!);
     }
     
     
     //MARK: - NET
     func regist(_ username:String ,_ password:String) -> Void
     {
+        HUD.show(.systemActivity, onView: self.view);
         let para:[String:Any] = [
             "username":username,
             "password":password
@@ -92,10 +111,22 @@ class RegistVC: BaseViewController {
         
         print(para);
         
-        post(url: kRegistUrl, para: para, success: { (value) in
+        post(url: kRegistUrl, para: para, success: {[weak self] (value) in
             print(value);
+            let dict = dmDict(value);
+            let code = dmInt(dict["code"]);
+            
+            if (code == 200) {
+                UIApplication.shared.delegate?.window??.makeToast("注册成功");
+                self?.navigationController?.popViewController(animated: true);
+            } else {
+                self?.view.makeToast(dmString(dict["msg"]));
+            }
+            HUD.hide();
         }) { (value, code, desc) in
             print(code);
+            self.view.makeToast(desc);
+            HUD.hide();
         }
     }
 

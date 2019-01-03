@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  DMBaseViewController.swift
 //  IOffice_Swift
 //
 //  Created by 西安旺豆电子信息有限公司 on 2018/3/7.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class DMBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

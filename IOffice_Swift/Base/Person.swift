@@ -12,6 +12,7 @@ class Person: NSObject {
 
     var name : String
     var age : Int
+    var test : String?
     
     var birthYear: Int {
         get {

@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import Toast_Swift
 
 
 @UIApplicationMain
@@ -20,23 +21,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow.init(frame: UIScreen.main.bounds);
     
-        window?.rootViewController = BaseNavigationController.init(rootViewController: LoginVC());
+        window?.rootViewController = DMBaseNavigationController.init(rootViewController: LoginVC());
     
         window?.makeKeyAndVisible();
         
         configIQKeyboard();
+        configToast();
         
         return true;
     }
     
+//MARK: - LOGIN / LOGOUT
+    
     func login()
     {
         let vc = SignVC()
-        let navc = BaseNavigationController.init(rootViewController: vc)
+        let navc = DMBaseNavigationController.init(rootViewController: vc)
         window?.rootViewController = navc
     }
     
-    //MARK: - CONFIG
+//MARK: - CONFIG
     
     func configIQKeyboard() -> Void {
         IQKeyboardManager.shared.enable = true;
@@ -44,7 +48,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true;
     }
     
-    //MARK: - DELEGATE
+    func configToast() -> Void {
+        ToastManager.shared.position = .center;
+        ToastManager.shared.duration = 2.5;
+    }
+    
+    
+    
+    
+//MARK: - DELEGATE
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

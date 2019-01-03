@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignVC: BaseViewController {
+class SignVC: DMBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

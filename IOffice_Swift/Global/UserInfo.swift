@@ -33,13 +33,20 @@ let user = UserInfo.shareUser
 
 class UserInfo: NSObject , NSCoding {
     
+
+    var name : String?
+    
+    var username : String?
+    var password : String?
+    var token : String?
     
     
-    var name:String?
     
     
     
     
+//MARK: - INIT
+    private override init() {}
     
     // {} 中间的只会在第一次调用shareUser的时候会调用
     // 并且遵循了dispatch_once  已经测试过
@@ -52,7 +59,6 @@ class UserInfo: NSObject , NSCoding {
         }
     }()
     
-    private override init() {}
     
     static func getFilePath() -> String {
         var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
@@ -70,7 +76,7 @@ class UserInfo: NSObject , NSCoding {
     }
     
     
-    //MARK: - 归档解档
+//MARK: - 归档解档
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: "name")
     }

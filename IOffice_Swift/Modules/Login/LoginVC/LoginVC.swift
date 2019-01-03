@@ -8,8 +8,9 @@
 
 import UIKit
 import SnapKit
+import PKHUD
 
-class LoginVC: BaseViewController {
+class LoginVC: DMBaseViewController {
 
     let bgImgV  = UIImageView();
     let logoIV  = UIImageView();
@@ -132,83 +133,69 @@ class LoginVC: BaseViewController {
         };
     }
     
-    //MARK: - ACTIONS
+//MARK: - ACTIONS
     @objc func clickLoginBtn() -> Void
     {
-        print("click login btn")
+        self.view.endEditing(true);
         
-        let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        delegate.login()
+        guard unameTF.text?.count != 0 else {
+            self.view.makeToast("请输入账号");
+            return;
+        }
         
-        //loadPwdKey()
+        guard pwdTF.text?.count != 0 else {
+            self.view.makeToast("请输入密码");
+            return;
+        }
+ 
+        login(uname: unameTF.text!, pwd: pwdTF.text!);
     }
     
-    @objc func clickRegistBtn() -> Void {
+    @objc func clickRegistBtn() -> Void
+    {
+        self.view.endEditing(true);
         self.navigationController?.pushViewController(RegistVC(), animated: true);
     }
     
     
-    //MARK: - NET
-    func regist(_ username:String ,_ password:String) -> Void
+//MARK: - NET
+    
+    func login(uname:String,pwd:String)
     {
-        let para:[String:Any] = [
-            "username":username,
-            "password":password
+        HUD.show(.systemActivity, onView: self.view);
+        
+        let para : [String:Any] = [
+            "username":uname,
+            "password":pwd
         ];
         
         print(para);
-        
-        post(url: kRegistUrl, para: para, success: { (value) in
+        post(url: kLoginUrl, para: para, success: {[weak self] (value) in
             print(value);
-        }) { (value, code, desc) in
-            print(code);
+            let dict = dmDict(value);
+            let code = dmInt(dict["code"]);
+            
+            if (code == 200) {
+                user.username = uname;
+                user.password = pwd;
+                
+                let objDict = dmDict(dict["obj"]);
+                user.token = dmString(objDict["token"]);
+                
+                user.write();
+                
+                let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate;
+                delegate.login();
+            } else {
+                self?.view.makeToast(dmString(dict["msg"]));
+            }
+            HUD.hide();
+        }) { (err, code, desc) in
+            print(desc);
+            HUD.hide();
         }
     }
-    
-    
-    
-//
-//
-//
-//    let url = "http://192.168.100.201:92/Safe.svc/IKey"
-//
-//
-//    func loadPwdKey() -> Void {
-//        //let para = ["name":unameTF.text]
-//
-////        request(url).responseData { (response) in
-////            print(response)
-////            print(response.request as Any)
-////            print(response.response as Any)
-////            print(response.data as Any)
-////            print(response.result)
-////        }
-//
-//
-//        let para :Parameters = ["name":unameTF.text!]
-//
-//        request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers: nil).responseString { (response) in
-////            print(response)
-////            print(response.request as Any)
-////            print(response.response as Any)
-//            //print(response.data as Any)
-////            print(response.result)
-//            switch response.result {
-//            case .success:
-//                print(response.response!.statusCode)
-//            case .failure(let error):
-//                print(error)
-//            }
-//
-//
-//        }
-//
-//    }
-//
-    
-    
-    
-    
+  
 }
 
 
