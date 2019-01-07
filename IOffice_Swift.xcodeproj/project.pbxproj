@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AA8593B21DCB0D400CAA0D1 /* RegistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */; };
+		0AC2483821E3325A002F7384 /* RoleCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2483721E3325A002F7384 /* RoleCreateVC.swift */; };
 		0AC3BDC121D601EB0094BA7F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC021D601EB0094BA7F /* Project.swift */; };
 		0AC3BDC321D6029D0094BA7F /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC221D6029D0094BA7F /* NetWork.swift */; };
 		0AC71C0021DDB9E800CCCE4A /* DMBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC71BFF21DDB9E800CCCE4A /* DMBaseModel.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistVC.swift; sourceTree = "<group>"; };
+		0AC2483721E3325A002F7384 /* RoleCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCreateVC.swift; sourceTree = "<group>"; };
 		0AC3BDC021D601EB0094BA7F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		0AC3BDC221D6029D0094BA7F /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		0AC71BFF21DDB9E800CCCE4A /* DMBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMBaseModel.swift; sourceTree = "<group>"; };
@@ -119,11 +121,20 @@
 		0AA8593C21DCB12E00CAA0D1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0AC2483221E32C22002F7384 /* RoleAndApprove */,
 				44683563204F9A0500467ED3 /* Login */,
 				640DD85E20580B5300A9D321 /* Sign */,
 				640DD8592058075100A9D321 /* Home */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		0AC2483221E32C22002F7384 /* RoleAndApprove */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2483721E3325A002F7384 /* RoleCreateVC.swift */,
+			);
+			path = RoleAndApprove;
 			sourceTree = "<group>";
 		};
 		0AC3BDBD21D5FDF20094BA7F /* Global */ = {
@@ -475,6 +486,7 @@
 				0AA8593B21DCB0D400CAA0D1 /* RegistVC.swift in Sources */,
 				640DD87D2058124800A9D321 /* DMDBManager.swift in Sources */,
 				640DD87620580D2F00A9D321 /* DBManager.m in Sources */,
+				0AC2483821E3325A002F7384 /* RoleCreateVC.swift in Sources */,
 				640DD85D205808F100A9D321 /* DMBaseNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

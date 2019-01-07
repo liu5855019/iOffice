@@ -39,6 +39,20 @@ class DMTools: NSObject {
     }
     
     
+    //MARK: - AdjustScroll
+    static func AdjustsScrollViewInsetNever(_ vc:UIViewController? , _ scrollView:UIScrollView)
+    {
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never;
+        } else {
+            if (vc != nil) {
+                vc?.automaticallyAdjustsScrollViewInsets = false;
+            }
+        }
+    }
+    
+    
+    
     
     //MARK: - JSON
     

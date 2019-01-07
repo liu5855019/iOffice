@@ -85,6 +85,10 @@ class LoginVC: DMBaseViewController {
         registBtn.setBackgroundImage(UIImage.init(named: "login_loginbtn_bg.png"), for: .normal)
         registBtn.titleLabel?.font = UIFont.systemFont(ofSize: kScaleW(17))
         registBtn.addTarget(self, action:#selector(clickRegistBtn) , for: .touchUpInside)
+        
+        
+        
+        unameTF.text = user.username;
     }
 
     func setupLayouts()

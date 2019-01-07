@@ -18,10 +18,10 @@ let scaleH = kScreenH / 736.0;
 let scaleW = kScreenW / 375.0;
 
 
-let kStatusHeight = UIApplication.shared.statusBarFrame.size.height;
-let kNavHeight = kStatusHeight + 44.0;
-let kIsIPhoneX = kStatusHeight == 44;
-let kSafeBottomHeight = kIsIPhoneX ? 34.0 : 0;
+let kStatusHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height;
+let kNavHeight:CGFloat = kStatusHeight + 44.0;
+let kIsIPhoneX:Bool = kStatusHeight == 44;
+let kSafeBottomHeight:CGFloat = kIsIPhoneX ? 34.0 : 0;
 
 
 

@@ -79,10 +79,16 @@ class UserInfo: NSObject , NSCoding {
 //MARK: - 归档解档
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: "name")
+        aCoder.encode(username, forKey: "username");
+        aCoder.encode(password, forKey: "password");
+        aCoder.encode(token, forKey: "token");
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
         self.name = aDecoder.decodeObject(forKey: "name") as? String
+        self.username = aDecoder.decodeObject(forKey: "username") as? String;
+        self.password = aDecoder.decodeObject(forKey: "password") as? String;
+        self.token = aDecoder.decodeObject(forKey: "token") as? String;
     }
 }

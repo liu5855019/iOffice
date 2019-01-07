@@ -21,7 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow.init(frame: UIScreen.main.bounds);
     
-        window?.rootViewController = DMBaseNavigationController.init(rootViewController: LoginVC());
+        if user.token?.count ?? 0 > 0 {
+            login();
+        } else {
+            window?.rootViewController = DMBaseNavigationController.init(rootViewController: LoginVC());
+        }
+        
+        
     
         window?.makeKeyAndVisible();
         
@@ -35,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func login()
     {
-        let vc = SignVC()
+        let vc = HomeVC()
         let navc = DMBaseNavigationController.init(rootViewController: vc)
         window?.rootViewController = navc
     }
