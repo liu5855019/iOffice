@@ -24,11 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if user.token?.count ?? 0 > 0 {
             login();
         } else {
-            window?.rootViewController = DMBaseNavigationController.init(rootViewController: LoginVC());
+            logout();
         }
         
-        
-    
         window?.makeKeyAndVisible();
         
         configIQKeyboard();
@@ -41,9 +39,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func login()
     {
-        let vc = HomeVC()
-        let navc = DMBaseNavigationController.init(rootViewController: vc)
-        window?.rootViewController = navc
+        let vc = HomeVC();
+        let navc = DMBaseNavigationController.init(rootViewController: vc);
+        window?.rootViewController = navc;
+    }
+    
+    func logout() {
+        user.token = "";
+        user.write();
+        let vc = LoginVC();
+        let navc = DMBaseNavigationController.init(rootViewController: vc);
+        window?.rootViewController = navc;
+    }
+    
+    func animateLogout(_ isOverdue:Bool?) {
+        UIView.transition(with: window!, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.logout();
+        }) { (done) in
+            if isOverdue ?? false {
+                self.window?.makeToast("登录信息已过期,请重新登录");
+            }
+        }
     }
     
 //MARK: - CONFIG

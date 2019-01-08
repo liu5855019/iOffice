@@ -72,7 +72,8 @@ class HomeVC: DMBaseViewController , UITableViewDataSource , UITableViewDelegate
     {
         tableView.deselectRow(at: indexPath, animated: true);
         
-        let cls : AnyClass? = NSClassFromString(datas[indexPath.row]);
+        let str = (Bundle.main.infoDictionary!["CFBundleName"] ?? "") as! String  + "." + datas[indexPath.row];
+        let cls : AnyClass? = NSClassFromString(str);
         if cls != nil {
             if cls is UIViewController.Type {
                 let vcCls = cls as! UIViewController.Type;

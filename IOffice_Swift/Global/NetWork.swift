@@ -10,18 +10,20 @@ import UIKit
 import Alamofire
 
 
-//let kServerIP = "http://192.168.100.121:3000";
+let kServerIP = "http://192.168.100.121:3000";
 
-let kServerIP = "http://47.105.171.135:3000";
+//let kServerIP = "http://47.105.171.135:3000";
 
 
 
 let kRegistUrl = kServerIP + "/user/regist";
 let kLoginUrl = kServerIP + "/user/login";
 
+let kCreateRoleUrl = kServerIP + "/role/createRole";
+
 
 func get(url:String,
-         para:Any,
+         para:Parameters?,
          success:@escaping (_ result:Any) -> Void,
          failure:@escaping (_ err:Any ,_ code:Int , _ desc:String) -> Void) -> Void
 {
@@ -34,7 +36,7 @@ func get(url:String,
 }
 
 func post(url:String,
-          para:Any,
+          para:Parameters?,
           success:@escaping (_ result:Any) -> Void,
           failure:@escaping (_ err:Any ,_ code:Int , _ desc:String) -> Void) -> Void
 {
@@ -47,26 +49,42 @@ func post(url:String,
 }
 
 func network(url:String,
-             para:Any,
+             para:Parameters?,
              method: HTTPMethod,
              encoding: ParameterEncoding,
              success:@escaping (_ result:Any) -> Void,
              failure:@escaping (_ err:Any ,_ code:Int , _ desc:String) -> Void) -> Void
 {
+    var headers : [String : String]? = nil;
+    if user.token?.count ?? 0 > 0 {
+        headers = ["token":user.token!];
+    }
+    
     request(url,
             method: method,
-            parameters: para as? Parameters,
+            parameters: para,
             encoding: encoding,
-            headers: nil)
+            headers: headers)
         .responseJSON(completionHandler: { (DataResponse) in
             switch DataResponse.result {
             case .success(let value) :
                 print(value);
                 if (DataResponse.response?.statusCode == 200) {
-                    print(Thread.current);
-                    DispatchQueue.main.async {
-                        success(value);
+                    let dict = dmDict(value);
+                    let code = dmInt(dict["code"]);
+                    
+                    if code == 401 {
+                        DispatchQueue.main.async {
+                            let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate;
+                            delegate.animateLogout(true);
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            success(value);
+                        }
                     }
+                    
+                    
                 } else {
                     DispatchQueue.main.async {
                         failure(value,(DataResponse.response?.statusCode)!,"");
@@ -74,9 +92,9 @@ func network(url:String,
                 }
                 break;
             case .failure(let err):
-                print(err);
+                //print(err);
                 DispatchQueue.main.async {
-                    failure(err,DataResponse.response?.statusCode ?? -1,"");
+                    failure(err,DataResponse.response?.statusCode ?? -1,err.localizedDescription);
                 }
                 break;
             }

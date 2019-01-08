@@ -13,10 +13,22 @@ class RoleCreateVC: DMBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Role create"
+        
+        createRole();
     }
     
 
-   
+    func createRole() {
+        let para = ["roleName":"aaa"];
+        
+        post(url: kCreateRoleUrl, para: para, success: { (value) in
+            
+            
+        }) { (err, code, desc) in
+            print(String(code) + " : " + desc);
+        }
+    }
     
     
     
