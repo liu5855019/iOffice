@@ -12,6 +12,7 @@ class HomeVC: DMBaseViewController , UITableViewDataSource , UITableViewDelegate
     
 
     let datas = ["RoleCreateVC",
+                 "CompanyManagerVC"
                  ];
     
     
@@ -84,5 +85,120 @@ class HomeVC: DMBaseViewController , UITableViewDataSource , UITableViewDelegate
         
         
     }
+    
+    
+    var nums : [Int] = [];
+    
+    func test() {
+        test2()
+        test3()
+        test4()
+        test5()
+        test6()
+        test7()
+        test8()
+        test9()
+    }
+    
+    func test2() {
+        for num:Int in 1...10000 {
+            let v = num % 2;
+            if (v == 1) {
+                nums.append(num);
+            }
+        }
+        print(nums);
+    }
+    
+    func test3() {
+        var muarr : [Int] = [];
+        for num:Int in nums {
+            let v = num % 3;
+            if (v == 0) {
+                muarr.append(num);
+            }
+        }
+        nums = muarr;
+        print(nums);
+    }
+    func test4() {
+        var muarr : [Int] = [];
+        for num:Int in nums {
+            let v = num % 4;
+            if (v == 1) {
+                muarr.append(num);
+            }
+        }
+        nums = muarr;
+        print(nums);
+    }
+    func test5() {
+        var muarr : [Int] = [];
+        for num:Int in nums {
+            let v = num % 5;
+            if (v == 4) {
+                muarr.append(num);
+            }
+        }
+        nums = muarr;
+        print(nums);
+    }
+    
+    func test6() {
+        var muarr : [Int] = [];
+        for num:Int in nums {
+            let v = num % 6;
+            if (v == 3) {
+                muarr.append(num);
+            }
+        }
+        nums = muarr;
+        print(nums);
+    }
+    
+    func test7() {
+        var muarr : [Int] = [];
+        for num:Int in nums {
+            let v = num % 7;
+            if (v == 0) {
+                muarr.append(num);
+            }
+        }
+        nums = muarr;
+        print(nums);
+    }
+    func test8() {
+        var muarr : [Int] = [];
+        for num:Int in nums {
+            let v = num % 8;
+            if (v == 1) {
+                muarr.append(num);
+            }
+        }
+        nums = muarr;
+        print(nums);
+    }
+    
+    func test9() {
+        var muarr : [Int] = [];
+        for num:Int in nums {
+            let v = num % 9;
+            if (v == 0) {
+                muarr.append(num);
+            }
+        }
+        nums = muarr;
+        print(nums);
+    }
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
 
 }

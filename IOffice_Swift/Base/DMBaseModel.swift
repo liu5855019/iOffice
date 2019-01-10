@@ -33,7 +33,13 @@ func dmDict(_ value: Any?) -> [String : Any] {
     }
 }
 
-
+func dmArray(_ value: Any?) -> Array<Any> {
+    if value is Array<Any> {
+        return value as! Array<Any>;
+    } else {
+        return Array<Any>();
+    }
+}
 
 
 

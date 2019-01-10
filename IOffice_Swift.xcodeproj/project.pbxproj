@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A83A21221E72234002E0FA6 /* CompanyManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83A21121E72234002E0FA6 /* CompanyManagerVC.swift */; };
 		0AA8593B21DCB0D400CAA0D1 /* RegistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */; };
 		0AC2483821E3325A002F7384 /* RoleCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2483721E3325A002F7384 /* RoleCreateVC.swift */; };
 		0AC3BDC121D601EB0094BA7F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC021D601EB0094BA7F /* Project.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A83A21121E72234002E0FA6 /* CompanyManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyManagerVC.swift; sourceTree = "<group>"; };
 		0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistVC.swift; sourceTree = "<group>"; };
 		0AC2483721E3325A002F7384 /* RoleCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCreateVC.swift; sourceTree = "<group>"; };
 		0AC3BDC021D601EB0094BA7F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				0AC2483721E3325A002F7384 /* RoleCreateVC.swift */,
+				0A83A21121E72234002E0FA6 /* CompanyManagerVC.swift */,
 			);
 			path = RoleAndApprove;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A83A21221E72234002E0FA6 /* CompanyManagerVC.swift in Sources */,
 				640DD85B2058077E00A9D321 /* HomeVC.swift in Sources */,
 				640DD87120580C7B00A9D321 /* FMDatabasePool.m in Sources */,
 				640DD87020580C7B00A9D321 /* FMDatabase.m in Sources */,

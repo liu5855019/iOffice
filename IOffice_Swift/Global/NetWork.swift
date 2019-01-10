@@ -22,6 +22,12 @@ let kLoginUrl = kServerIP + "/user/login";
 let kCreateRoleUrl = kServerIP + "/role/createRole";
 
 
+
+let kCreateCompanyUrl = kServerIP + "/dept/createCompany";
+let kGetCompanyListUrl = kServerIP + "/dept/companyList";
+
+
+
 func get(url:String,
          para:Parameters?,
          success:@escaping (_ result:Any) -> Void,
