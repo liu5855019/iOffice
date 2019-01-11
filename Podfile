@@ -8,6 +8,7 @@ target 'IOffice_Swift' do
    pod 'Alamofire'              #4.8.0
    pod 'SnapKit'                #4.2.0
    pod 'IQKeyboardManagerSwift' #6.2.0
+   pod 'IQDropDownTextField'    #1.1.1
    pod 'Toast-Swift'            #4.0.1
    pod 'PKHUD'                  #5.2.0
 

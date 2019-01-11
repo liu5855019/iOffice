@@ -1,23 +1,28 @@
 //
-//  CompanyManagerVC.swift
+//  DeptManagerVC.swift
 //  IOffice_Swift
 //
-//  Created by iMac-03 on 2019/1/10.
+//  Created by iMac-03 on 2019/1/11.
 //  Copyright © 2019 西安旺豆电子信息有限公司. All rights reserved.
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+import IQDropDownTextField
 
-class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewDataSource {
 
-    var datas = [CompanyModel]();
+class DeptManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewDataSource {
     
-    var nameTF = UITextField();
+    var datas = [DeptModel]();
+    var companyDatas = [CompanyModel]();
+    
+    var companyTF = IQDropDownTextField();
+    var deptTF = UITextField();
     var btn = UIButton();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = "Company";
         
         self.setupViews();
@@ -28,12 +33,19 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
     
     func setupViews()
     {
-        self.view.addSubview(nameTF);
+        self.view.addSubview(companyTF);
+        self.view.addSubview(deptTF)
         self.view.addSubview(btn);
         self.view.addSubview(self.tabV);
         
-        nameTF.textColor = UIColor.black;
-        nameTF.backgroundColor = UIColor.lightGray;
+        
+        companyTF.textColor = UIColor.black;
+        companyTF.backgroundColor = UIColor.groupTableViewBackground;
+        companyTF.optionalItemText = "请选择";
+        
+        deptTF.textColor = UIColor.black;
+        deptTF.backgroundColor = UIColor.groupTableViewBackground;
+        
         
         btn.setTitle("submit", for: .normal);
         btn.addTarget(self, action: #selector(clickBtn), for: .touchUpInside);
@@ -42,12 +54,16 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
     
     func setupLayouts()
     {
-        nameTF.snp.makeConstraints { (make) in
+        companyTF.snp.makeConstraints { (make) in
             make.top.equalTo(kNavHeight + 10);
             make.left.equalTo(15);
             make.height.equalTo(40);
             make.width.equalTo(kScaleW(200));
         };
+        
+        deptTF.snp.makeConstraints { (make) in
+            make.top.equalTo(companyTF)
+        }
         
         btn.snp.makeConstraints { (make) in
             make.centerY.equalTo(nameTF);
@@ -66,13 +82,13 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
     @objc func clickBtn()
     {
         self.view.endEditing(true);
-        
-        guard nameTF.text?.count ?? 0 > 0 else {
-            self.view.makeToast("please input company name");
+
+        guard nameTF.selectedRow >= 0 else {
+            self.view.makeToast("please select company");
             return;
         }
-        
-        self.createCompany(companyName: nameTF.text!);
+
+        self.createCompany(companyName: nameTF.selectedItem!);
     }
     
     //MARK: - TABLEVIEW
@@ -117,7 +133,7 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
         tableView.deselectRow(at: indexPath, animated: true);
     }
     
-
+    
     //MARK: - NET
     
     func createCompany(companyName:String)
@@ -127,10 +143,10 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
         post(url: kCreateCompanyUrl, para:para, success: {[weak self] (value) in
             let dict = dmDict(value);
             let code = dmInt(dict["code"]);
-
+            
             if (code == 200) {
                 self?.view.makeToast("添加成功");
-                self?.nameTF.text = "";
+                self?.nameTF.selectedItem = "";
                 self?.loadCompanyList();
             } else {
                 self?.view.makeToast(dmString(dict["msg"]));
@@ -149,11 +165,14 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
             if (code == 200) {
                 let arr = dmArray(dict["obj"]);
                 var muarray : [CompanyModel] = [];
+                var muStrArr : [String] = [];
                 for tmp in arr {
                     let tmpDict = dmDict(tmp);
                     muarray.append(CompanyModel.init(dict: tmpDict));
+                    muStrArr.append(dmString(tmpDict["company_name"]));
                 }
-                self?.datas = muarray;
+                self?.companyDatas = muarray;
+                self?.nameTF.itemList = muStrArr;
                 self?.tabV.reloadData();
             } else {
                 self?.view.makeToast(dmString(dict["msg"]));

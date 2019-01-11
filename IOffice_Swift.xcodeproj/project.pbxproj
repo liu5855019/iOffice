@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A83A21221E72234002E0FA6 /* CompanyManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83A21121E72234002E0FA6 /* CompanyManagerVC.swift */; };
+		0A8D888321E8522700FE6B4B /* DeptManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D888221E8522700FE6B4B /* DeptManagerVC.swift */; };
+		0A8D888521E8528700FE6B4B /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D888421E8528700FE6B4B /* CompanyModel.swift */; };
+		0A8D888721E8629900FE6B4B /* DeptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D888621E8629900FE6B4B /* DeptModel.swift */; };
 		0AA8593B21DCB0D400CAA0D1 /* RegistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */; };
 		0AC2483821E3325A002F7384 /* RoleCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2483721E3325A002F7384 /* RoleCreateVC.swift */; };
 		0AC3BDC121D601EB0094BA7F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC021D601EB0094BA7F /* Project.swift */; };
@@ -53,6 +56,9 @@
 
 /* Begin PBXFileReference section */
 		0A83A21121E72234002E0FA6 /* CompanyManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyManagerVC.swift; sourceTree = "<group>"; };
+		0A8D888221E8522700FE6B4B /* DeptManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeptManagerVC.swift; sourceTree = "<group>"; };
+		0A8D888421E8528700FE6B4B /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		0A8D888621E8629900FE6B4B /* DeptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeptModel.swift; sourceTree = "<group>"; };
 		0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistVC.swift; sourceTree = "<group>"; };
 		0AC2483721E3325A002F7384 /* RoleCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCreateVC.swift; sourceTree = "<group>"; };
 		0AC3BDC021D601EB0094BA7F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 			children = (
 				0AC2483721E3325A002F7384 /* RoleCreateVC.swift */,
 				0A83A21121E72234002E0FA6 /* CompanyManagerVC.swift */,
+				0A8D888221E8522700FE6B4B /* DeptManagerVC.swift */,
+				0A8D888421E8528700FE6B4B /* CompanyModel.swift */,
+				0A8D888621E8629900FE6B4B /* DeptModel.swift */,
 			);
 			path = RoleAndApprove;
 			sourceTree = "<group>";
@@ -408,6 +417,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IOffice_Swift/Pods-IOffice_Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQDropDownTextField/IQDropDownTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -416,6 +426,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQDropDownTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -468,6 +479,7 @@
 			files = (
 				0A83A21221E72234002E0FA6 /* CompanyManagerVC.swift in Sources */,
 				640DD85B2058077E00A9D321 /* HomeVC.swift in Sources */,
+				0A8D888321E8522700FE6B4B /* DeptManagerVC.swift in Sources */,
 				640DD87120580C7B00A9D321 /* FMDatabasePool.m in Sources */,
 				640DD87020580C7B00A9D321 /* FMDatabase.m in Sources */,
 				44683554204F995A00467ED3 /* ViewController.swift in Sources */,
@@ -482,11 +494,13 @@
 				446835FE204FD81D00467ED3 /* Date_DMTools.swift in Sources */,
 				640DD86F20580C7B00A9D321 /* FMDatabaseAdditions.m in Sources */,
 				446835FB204FD29C00467ED3 /* Son.swift in Sources */,
+				0A8D888521E8528700FE6B4B /* CompanyModel.swift in Sources */,
 				446835F9204FCDEC00467ED3 /* Person.swift in Sources */,
 				4468356A204F9B2B00467ED3 /* DMBaseViewController.swift in Sources */,
 				640DD86020580B8F00A9D321 /* SignVC.swift in Sources */,
 				0AC3BDC121D601EB0094BA7F /* Project.swift in Sources */,
 				0AC3BDC321D6029D0094BA7F /* NetWork.swift in Sources */,
+				0A8D888721E8629900FE6B4B /* DeptModel.swift in Sources */,
 				0AA8593B21DCB0D400CAA0D1 /* RegistVC.swift in Sources */,
 				640DD87D2058124800A9D321 /* DMDBManager.swift in Sources */,
 				640DD87620580D2F00A9D321 /* DBManager.m in Sources */,

@@ -12,7 +12,8 @@ class HomeVC: DMBaseViewController , UITableViewDataSource , UITableViewDelegate
     
 
     let datas = ["RoleCreateVC",
-                 "CompanyManagerVC"
+                 "CompanyManagerVC",
+                 "DeptManagerVC"
                  ];
     
     

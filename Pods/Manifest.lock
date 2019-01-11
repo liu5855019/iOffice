@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.0)
+  - IQDropDownTextField (1.1.1)
   - IQKeyboardManagerSwift (6.2.0)
   - PKHUD (5.2.0)
   - SnapKit (4.2.0)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - IQDropDownTextField
   - IQKeyboardManagerSwift
   - PKHUD
   - SnapKit
@@ -14,11 +16,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  IQDropDownTextField: 3d2e5728a2b83ff5dbb14cb9b497a80005124cbe
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
 
-PODFILE CHECKSUM: 064b6102dd3f77000a2e5fca989d365d5f1f97bd
+PODFILE CHECKSUM: 954d7aee7baac205ebd10585390cc071bdfd2377
 
 COCOAPODS: 1.4.0
