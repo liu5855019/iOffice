@@ -10,9 +10,9 @@ import UIKit
 import Alamofire
 
 
-let kServerIP = "http://192.168.100.121:3000";
+//let kServerIP = "http://192.168.100.121:3000";
 
-//let kServerIP = "http://47.105.171.135:3000";
+let kServerIP = "http://47.105.171.135:3000";
 
 
 
@@ -20,12 +20,18 @@ let kRegistUrl = kServerIP + "/user/regist";
 let kLoginUrl = kServerIP + "/user/login";
 
 let kCreateRoleUrl = kServerIP + "/role/createRole";
-
-
+let kGetRoleListUrl = kServerIP + "/role/roleList";
 
 let kCreateCompanyUrl = kServerIP + "/dept/createCompany";
 let kGetCompanyListUrl = kServerIP + "/dept/companyList";
+let kCreateDeptUrl = kServerIP + "/dept/createDepartment";
+let kGetDeptListUrl = kServerIP + "/dept/departmentList";
 
+let kCreateModuleUrl = kServerIP + "/module/createModule";
+let kGetModuleListUrl = kServerIP + "/module/moduleList";
+
+let kCreateFlowUrl = kServerIP + "/flow/createFlow";
+let kGetFlowListUrl = kServerIP + "/flow/flowList";
 
 
 func get(url:String,

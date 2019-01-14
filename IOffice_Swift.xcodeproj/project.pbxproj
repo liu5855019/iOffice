@@ -12,10 +12,16 @@
 		0A8D888521E8528700FE6B4B /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D888421E8528700FE6B4B /* CompanyModel.swift */; };
 		0A8D888721E8629900FE6B4B /* DeptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D888621E8629900FE6B4B /* DeptModel.swift */; };
 		0AA8593B21DCB0D400CAA0D1 /* RegistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */; };
-		0AC2483821E3325A002F7384 /* RoleCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2483721E3325A002F7384 /* RoleCreateVC.swift */; };
+		0AC2483821E3325A002F7384 /* RoleManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2483721E3325A002F7384 /* RoleManagerVC.swift */; };
 		0AC3BDC121D601EB0094BA7F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC021D601EB0094BA7F /* Project.swift */; };
 		0AC3BDC321D6029D0094BA7F /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3BDC221D6029D0094BA7F /* NetWork.swift */; };
 		0AC71C0021DDB9E800CCCE4A /* DMBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC71BFF21DDB9E800CCCE4A /* DMBaseModel.swift */; };
+		0AF5CE4C21EC47D100BD6F6E /* RoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5CE4B21EC47D100BD6F6E /* RoleModel.swift */; };
+		0AF5CE4E21EC6C4A00BD6F6E /* FlowManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5CE4D21EC6C4A00BD6F6E /* FlowManagerVC.swift */; };
+		0AF5CE5021EC739900BD6F6E /* ModuleManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5CE4F21EC739900BD6F6E /* ModuleManagerVC.swift */; };
+		0AF5CE5221EC73CF00BD6F6E /* ModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5CE5121EC73CF00BD6F6E /* ModuleModel.swift */; };
+		0AF5CE5521EC7AAE00BD6F6E /* FlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5CE5421EC7AAE00BD6F6E /* FlowModel.swift */; };
+		0AF5CE5721EC82DE00BD6F6E /* FlowSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5CE5621EC82DE00BD6F6E /* FlowSelectVC.swift */; };
 		0C5802F3E45516930DB55C52 /* Pods_IOffice_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219B35AF755933059A1E8503 /* Pods_IOffice_Swift.framework */; };
 		4447F861205A2DC800D3155C /* DMTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447F860205A2DC800D3155C /* DMTools.swift */; };
 		44683552204F995A00467ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44683551204F995A00467ED3 /* AppDelegate.swift */; };
@@ -60,10 +66,16 @@
 		0A8D888421E8528700FE6B4B /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		0A8D888621E8629900FE6B4B /* DeptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeptModel.swift; sourceTree = "<group>"; };
 		0AA8593A21DCB0D400CAA0D1 /* RegistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistVC.swift; sourceTree = "<group>"; };
-		0AC2483721E3325A002F7384 /* RoleCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCreateVC.swift; sourceTree = "<group>"; };
+		0AC2483721E3325A002F7384 /* RoleManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleManagerVC.swift; sourceTree = "<group>"; };
 		0AC3BDC021D601EB0094BA7F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		0AC3BDC221D6029D0094BA7F /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		0AC71BFF21DDB9E800CCCE4A /* DMBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMBaseModel.swift; sourceTree = "<group>"; };
+		0AF5CE4B21EC47D100BD6F6E /* RoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleModel.swift; sourceTree = "<group>"; };
+		0AF5CE4D21EC6C4A00BD6F6E /* FlowManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowManagerVC.swift; sourceTree = "<group>"; };
+		0AF5CE4F21EC739900BD6F6E /* ModuleManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleManagerVC.swift; sourceTree = "<group>"; };
+		0AF5CE5121EC73CF00BD6F6E /* ModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleModel.swift; sourceTree = "<group>"; };
+		0AF5CE5421EC7AAE00BD6F6E /* FlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowModel.swift; sourceTree = "<group>"; };
+		0AF5CE5621EC82DE00BD6F6E /* FlowSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowSelectVC.swift; sourceTree = "<group>"; };
 		1AD9D92DE0B64285A0DC66F7 /* Pods-IOffice_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOffice_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOffice_Swift/Pods-IOffice_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		219B35AF755933059A1E8503 /* Pods_IOffice_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOffice_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4447F860205A2DC800D3155C /* DMTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMTools.swift; sourceTree = "<group>"; };
@@ -140,11 +152,13 @@
 		0AC2483221E32C22002F7384 /* RoleAndApprove */ = {
 			isa = PBXGroup;
 			children = (
-				0AC2483721E3325A002F7384 /* RoleCreateVC.swift */,
+				0AF5CE5321EC73DD00BD6F6E /* Model */,
+				0AC2483721E3325A002F7384 /* RoleManagerVC.swift */,
 				0A83A21121E72234002E0FA6 /* CompanyManagerVC.swift */,
 				0A8D888221E8522700FE6B4B /* DeptManagerVC.swift */,
-				0A8D888421E8528700FE6B4B /* CompanyModel.swift */,
-				0A8D888621E8629900FE6B4B /* DeptModel.swift */,
+				0AF5CE4F21EC739900BD6F6E /* ModuleManagerVC.swift */,
+				0AF5CE4D21EC6C4A00BD6F6E /* FlowManagerVC.swift */,
+				0AF5CE5621EC82DE00BD6F6E /* FlowSelectVC.swift */,
 			);
 			path = RoleAndApprove;
 			sourceTree = "<group>";
@@ -160,6 +174,18 @@
 				4447F860205A2DC800D3155C /* DMTools.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		0AF5CE5321EC73DD00BD6F6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A8D888421E8528700FE6B4B /* CompanyModel.swift */,
+				0A8D888621E8629900FE6B4B /* DeptModel.swift */,
+				0AF5CE4B21EC47D100BD6F6E /* RoleModel.swift */,
+				0AF5CE5121EC73CF00BD6F6E /* ModuleModel.swift */,
+				0AF5CE5421EC7AAE00BD6F6E /* FlowModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		44683545204F995A00467ED3 = {
@@ -477,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF5CE5721EC82DE00BD6F6E /* FlowSelectVC.swift in Sources */,
 				0A83A21221E72234002E0FA6 /* CompanyManagerVC.swift in Sources */,
 				640DD85B2058077E00A9D321 /* HomeVC.swift in Sources */,
 				0A8D888321E8522700FE6B4B /* DeptManagerVC.swift in Sources */,
@@ -487,12 +514,14 @@
 				44683552204F995A00467ED3 /* AppDelegate.swift in Sources */,
 				0AC71C0021DDB9E800CCCE4A /* DMBaseModel.swift in Sources */,
 				4468356C204F9B5500467ED3 /* LoginVC.swift in Sources */,
+				0AF5CE5021EC739900BD6F6E /* ModuleManagerVC.swift in Sources */,
 				446835F7204FC63900467ED3 /* UserInfo.swift in Sources */,
 				640DD86E20580C7B00A9D321 /* FMDatabaseQueue.m in Sources */,
 				44683582204FA26700467ED3 /* Common.swift in Sources */,
 				640DD87220580C7B00A9D321 /* FMResultSet.m in Sources */,
 				446835FE204FD81D00467ED3 /* Date_DMTools.swift in Sources */,
 				640DD86F20580C7B00A9D321 /* FMDatabaseAdditions.m in Sources */,
+				0AF5CE5521EC7AAE00BD6F6E /* FlowModel.swift in Sources */,
 				446835FB204FD29C00467ED3 /* Son.swift in Sources */,
 				0A8D888521E8528700FE6B4B /* CompanyModel.swift in Sources */,
 				446835F9204FCDEC00467ED3 /* Person.swift in Sources */,
@@ -504,8 +533,11 @@
 				0AA8593B21DCB0D400CAA0D1 /* RegistVC.swift in Sources */,
 				640DD87D2058124800A9D321 /* DMDBManager.swift in Sources */,
 				640DD87620580D2F00A9D321 /* DBManager.m in Sources */,
-				0AC2483821E3325A002F7384 /* RoleCreateVC.swift in Sources */,
+				0AF5CE4E21EC6C4A00BD6F6E /* FlowManagerVC.swift in Sources */,
+				0AF5CE5221EC73CF00BD6F6E /* ModuleModel.swift in Sources */,
+				0AC2483821E3325A002F7384 /* RoleManagerVC.swift in Sources */,
 				640DD85D205808F100A9D321 /* DMBaseNavigationController.swift in Sources */,
+				0AF5CE4C21EC47D100BD6F6E /* RoleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

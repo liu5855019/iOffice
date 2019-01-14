@@ -11,9 +11,11 @@ import UIKit
 class HomeVC: DMBaseViewController , UITableViewDataSource , UITableViewDelegate {
     
 
-    let datas = ["RoleCreateVC",
+    let datas = ["RoleManagerVC",
                  "CompanyManagerVC",
-                 "DeptManagerVC"
+                 "DeptManagerVC",
+                 "ModuleManagerVC",
+                 "FlowManagerVC"
                  ];
     
     

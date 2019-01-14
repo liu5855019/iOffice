@@ -1,62 +1,69 @@
 //
-//  CompanyManagerVC.swift
+//  FlowSelectVC.swift
 //  IOffice_Swift
 //
-//  Created by iMac-03 on 2019/1/10.
+//  Created by iMac-03 on 2019/1/14.
 //  Copyright © 2019 西安旺豆电子信息有限公司. All rights reserved.
 //
 
 import UIKit
 
-class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewDataSource {
+class FlowSelectVC: DMBaseViewController,UITableViewDelegate,UITableViewDataSource {
 
-    var datas = [CompanyModel]();
     
-    var nameTF = UITextField();
+    var didSelectBlock:((_ flows:[RoleModel]) -> Void)? = nil;
+    
+
+    
+    var datas = [RoleModel]();
+    var selectDatas = [RoleModel]();
+    
+    var flowLab = UILabel();
     var btn = UIButton();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = "Company";
+        
+        self.title = "Flow select";
+        self.navigationItem.rightBarButtonItem = self.rightItem;
         
         self.setupViews();
         self.setupLayouts();
         
-        self.loadCompanyList();
+        self.loadRoleList();
     }
     
     func setupViews()
     {
-        self.view.addSubview(nameTF);
+        self.view.addSubview(flowLab);
         self.view.addSubview(btn);
         self.view.addSubview(self.tabV);
         
-        nameTF.textColor = UIColor.black;
-        nameTF.backgroundColor = UIColor.groupTableViewBackground;
+        flowLab.textColor = UIColor.black;
+        flowLab.backgroundColor = UIColor.groupTableViewBackground;
+        flowLab.font = UIFont.systemFont(ofSize: 12);
         
-        btn.setTitle("submit", for: .normal);
+        btn.setTitle("<-", for: .normal);
         btn.addTarget(self, action: #selector(clickBtn), for: .touchUpInside);
         btn.setTitleColor(UIColor.blue, for: .normal);
     }
     
     func setupLayouts()
     {
-        nameTF.snp.makeConstraints { (make) in
+        flowLab.snp.makeConstraints { (make) in
             make.top.equalTo(kNavHeight + 10);
             make.left.equalTo(15);
             make.height.equalTo(40);
-            make.width.equalTo(kScaleW(200));
         };
         
         btn.snp.makeConstraints { (make) in
-            make.centerY.equalTo(nameTF);
+            make.centerY.equalTo(flowLab);
             make.right.equalTo(-15);
             make.height.equalTo(40);
         };
         
         tabV.snp.makeConstraints { (make) in
-            make.top.equalTo(nameTF.snp_bottomMargin);
+            make.top.equalTo(flowLab.snp.bottom).offset(10);
             make.left.right.equalTo(0);
             make.bottom.equalTo(kSafeBottomHeight);
         };
@@ -67,12 +74,35 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
     {
         self.view.endEditing(true);
         
-        guard nameTF.text?.count ?? 0 > 0 else {
-            self.view.makeToast("please input company name");
-            return;
+        if selectDatas.count > 0 {
+            selectDatas.removeLast();
+            updateLabel();
+        }
+    }
+    
+    @objc func clickRightItem()
+    {
+        self.view.endEditing(true);
+        
+        if selectDatas.count < 2 {
+            self.view.makeToast("请最少选择两个角色");
+        } else {
+            if (didSelectBlock != nil) {
+                didSelectBlock!(selectDatas);
+            }
+            self.navigationController?.popViewController(animated: true);
+        }
+    }
+    
+    func updateLabel()
+    {
+        var strArr = [String]();
+        
+        for role in selectDatas {
+            strArr.append(role.role_name!);
         }
         
-        self.createCompany(companyName: nameTF.text!);
+        flowLab.text = strArr.joined(separator: "=>");
     }
     
     //MARK: - TABLEVIEW
@@ -107,7 +137,7 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
             cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell");
         }
         
-        cell?.textLabel?.text = datas[indexPath.row].company_name;
+        cell?.textLabel?.text = datas[indexPath.row].role_name;
         
         return cell!;
     }
@@ -115,43 +145,36 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath, animated: true);
+        
+        selectDatas.append(datas[indexPath.row]);
+        
+        updateLabel();
     }
     
-
+    
+    lazy var rightItem: UIBarButtonItem = {
+        var _rightItem = UIBarButtonItem.init(title: "确定", style: .done, target: self, action: #selector(clickRightItem));
+        return _rightItem;
+    }();
+    
+    
+    
+    
+    
     //MARK: - NET
     
-    func createCompany(companyName:String)
+    func loadRoleList()
     {
-        let para = ["companyName":companyName];
-        
-        post(url: kCreateCompanyUrl, para:para, success: {[weak self] (value) in
-            let dict = dmDict(value);
-            let code = dmInt(dict["code"]);
-
-            if (code == 200) {
-                self?.view.makeToast("添加成功");
-                self?.nameTF.text = "";
-                self?.loadCompanyList();
-            } else {
-                self?.view.makeToast(dmString(dict["msg"]));
-            }
-        }) { (err, code, desc) in
-            print(String(code) + " : " + desc);
-        };
-    }
-    
-    func loadCompanyList()
-    {
-        post(url: kGetCompanyListUrl, para: nil, success: { [weak self] (value) in
+        post(url: kGetRoleListUrl, para: nil, success: { [weak self] (value) in
             let dict = dmDict(value);
             let code = dmInt(dict["code"]);
             
             if (code == 200) {
                 let arr = dmArray(dict["obj"]);
-                var muarray : [CompanyModel] = [];
+                var muarray : [RoleModel] = [];
                 for tmp in arr {
                     let tmpDict = dmDict(tmp);
-                    muarray.append(CompanyModel.init(dict: tmpDict));
+                    muarray.append(RoleModel.init(dict: tmpDict));
                 }
                 self?.datas = muarray;
                 self?.tabV.reloadData();
@@ -162,4 +185,6 @@ class CompanyManagerVC: DMBaseViewController,UITableViewDelegate,UITableViewData
             print(String(code) + " : " + desc);
         }
     }
+    
+
 }

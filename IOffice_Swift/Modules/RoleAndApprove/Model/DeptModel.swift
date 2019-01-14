@@ -11,12 +11,12 @@ import UIKit
 class DeptModel: DMBaseModel {
 
     var guid : String?;
-    var company_name : String?;
-    
+    var department_name : String?;
+    var company_guid : String?;
     
     init(dict:[String:Any]) {
         guid = dmString(dict["guid"]);
-        company_name = dmString(dict["company_name"]);
+        department_name = dmString(dict["department_name"]);
+        company_guid = dmString(dict["company_guid"]);
     }
-    
 }
