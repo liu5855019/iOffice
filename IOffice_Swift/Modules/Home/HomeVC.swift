@@ -15,7 +15,8 @@ class HomeVC: DMBaseViewController , UITableViewDataSource , UITableViewDelegate
                  "CompanyManagerVC",
                  "DeptManagerVC",
                  "ModuleManagerVC",
-                 "FlowManagerVC"
+                 "FlowManagerVC",
+                 "AccountListVC",
                  ];
     
     
@@ -33,6 +34,21 @@ class HomeVC: DMBaseViewController , UITableViewDataSource , UITableViewDelegate
     func setupViews()
     {
         self.view.addSubview(tabV);
+        
+        self.navigationItem.rightBarButtonItem = self.rightItem;
+    }
+    
+    
+    
+    lazy var rightItem: UIBarButtonItem = {
+        var _rightItem = UIBarButtonItem.init(title: "退出", style: .done, target: self, action: #selector(clickRightItem));
+        return _rightItem;
+    }();
+    
+    @objc func clickRightItem()
+    {
+        let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate;
+        delegate.animateLogout(nil);
     }
 
     //MARK: - TABLEVIEW

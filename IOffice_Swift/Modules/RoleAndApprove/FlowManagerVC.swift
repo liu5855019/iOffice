@@ -151,7 +151,7 @@ class FlowManagerVC: DMBaseViewController , UITableViewDataSource , UITableViewD
         var strArr = [String]();
         
         for role in selectFlows {
-            strArr.append(role.role_name!);
+            strArr.append(role.role_name);
         }
         
         flowLab.text = strArr.joined(separator: "=>");
@@ -208,7 +208,7 @@ class FlowManagerVC: DMBaseViewController , UITableViewDataSource , UITableViewD
 
         var flowStrs = [String]();
         for role in selectFlows {
-            flowStrs.append(role.guid!);
+            flowStrs.append(role.guid);
         }
 
         let para = ["flow_name":flow_name,

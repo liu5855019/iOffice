@@ -99,7 +99,7 @@ class FlowSelectVC: DMBaseViewController,UITableViewDelegate,UITableViewDataSour
         var strArr = [String]();
         
         for role in selectDatas {
-            strArr.append(role.role_name!);
+            strArr.append(role.role_name);
         }
         
         flowLab.text = strArr.joined(separator: "=>");

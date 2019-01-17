@@ -10,9 +10,9 @@ import UIKit
 
 class DeptModel: DMBaseModel {
 
-    var guid : String?;
-    var department_name : String?;
-    var company_guid : String?;
+    var guid = "";
+    var department_name = "";
+    var company_guid = "";
     
     init(dict:[String:Any]) {
         guid = dmString(dict["guid"]);

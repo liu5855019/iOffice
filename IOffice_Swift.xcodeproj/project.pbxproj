@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3264F321F0293400E1D030 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3264F221F0293400E1D030 /* UserInfoVC.swift */; };
+		0A3264F521F0300100E1D030 /* AccountListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3264F421F0300100E1D030 /* AccountListVC.swift */; };
+		0A3264F721F031DE00E1D030 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3264F621F031DE00E1D030 /* AccountModel.swift */; };
+		0A3264F921F03B6D00E1D030 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3264F821F03B6D00E1D030 /* UserInfoModel.swift */; };
 		0A83A21221E72234002E0FA6 /* CompanyManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83A21121E72234002E0FA6 /* CompanyManagerVC.swift */; };
 		0A8D888321E8522700FE6B4B /* DeptManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D888221E8522700FE6B4B /* DeptManagerVC.swift */; };
 		0A8D888521E8528700FE6B4B /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D888421E8528700FE6B4B /* CompanyModel.swift */; };
@@ -61,6 +65,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3264F221F0293400E1D030 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
+		0A3264F421F0300100E1D030 /* AccountListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListVC.swift; sourceTree = "<group>"; };
+		0A3264F621F031DE00E1D030 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		0A3264F821F03B6D00E1D030 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		0A83A21121E72234002E0FA6 /* CompanyManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyManagerVC.swift; sourceTree = "<group>"; };
 		0A8D888221E8522700FE6B4B /* DeptManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeptManagerVC.swift; sourceTree = "<group>"; };
 		0A8D888421E8528700FE6B4B /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
@@ -159,6 +167,8 @@
 				0AF5CE4F21EC739900BD6F6E /* ModuleManagerVC.swift */,
 				0AF5CE4D21EC6C4A00BD6F6E /* FlowManagerVC.swift */,
 				0AF5CE5621EC82DE00BD6F6E /* FlowSelectVC.swift */,
+				0A3264F421F0300100E1D030 /* AccountListVC.swift */,
+				0A3264F221F0293400E1D030 /* UserInfoVC.swift */,
 			);
 			path = RoleAndApprove;
 			sourceTree = "<group>";
@@ -184,6 +194,8 @@
 				0AF5CE4B21EC47D100BD6F6E /* RoleModel.swift */,
 				0AF5CE5121EC73CF00BD6F6E /* ModuleModel.swift */,
 				0AF5CE5421EC7AAE00BD6F6E /* FlowModel.swift */,
+				0A3264F621F031DE00E1D030 /* AccountModel.swift */,
+				0A3264F821F03B6D00E1D030 /* UserInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -507,10 +519,12 @@
 				0A83A21221E72234002E0FA6 /* CompanyManagerVC.swift in Sources */,
 				640DD85B2058077E00A9D321 /* HomeVC.swift in Sources */,
 				0A8D888321E8522700FE6B4B /* DeptManagerVC.swift in Sources */,
+				0A3264F521F0300100E1D030 /* AccountListVC.swift in Sources */,
 				640DD87120580C7B00A9D321 /* FMDatabasePool.m in Sources */,
 				640DD87020580C7B00A9D321 /* FMDatabase.m in Sources */,
 				44683554204F995A00467ED3 /* ViewController.swift in Sources */,
 				4447F861205A2DC800D3155C /* DMTools.swift in Sources */,
+				0A3264F921F03B6D00E1D030 /* UserInfoModel.swift in Sources */,
 				44683552204F995A00467ED3 /* AppDelegate.swift in Sources */,
 				0AC71C0021DDB9E800CCCE4A /* DMBaseModel.swift in Sources */,
 				4468356C204F9B5500467ED3 /* LoginVC.swift in Sources */,
@@ -521,6 +535,7 @@
 				640DD87220580C7B00A9D321 /* FMResultSet.m in Sources */,
 				446835FE204FD81D00467ED3 /* Date_DMTools.swift in Sources */,
 				640DD86F20580C7B00A9D321 /* FMDatabaseAdditions.m in Sources */,
+				0A3264F721F031DE00E1D030 /* AccountModel.swift in Sources */,
 				0AF5CE5521EC7AAE00BD6F6E /* FlowModel.swift in Sources */,
 				446835FB204FD29C00467ED3 /* Son.swift in Sources */,
 				0A8D888521E8528700FE6B4B /* CompanyModel.swift in Sources */,
@@ -538,6 +553,7 @@
 				0AC2483821E3325A002F7384 /* RoleManagerVC.swift in Sources */,
 				640DD85D205808F100A9D321 /* DMBaseNavigationController.swift in Sources */,
 				0AF5CE4C21EC47D100BD6F6E /* RoleModel.swift in Sources */,
+				0A3264F321F0293400E1D030 /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
